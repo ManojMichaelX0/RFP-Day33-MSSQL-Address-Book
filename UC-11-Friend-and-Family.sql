@@ -93,21 +93,11 @@ from Address_Book_Table
 where RelationType='Family'
 Go
 
-Create Table Address_Book_Table2 -- UC-11 Create Address Book Table2 
-(
-FirstName varchar(50),
-LastName varchar(50),
-RelationType varchar(20)
-)
-
-
-Insert into Address_Book_Table2 --UC-11 Add Friend and family
-(FirstName,LastName,RelationType) 
-values('Ichigo','kurosaki','Friend'),
-('Ichigo','kurosaki','Family'),
-('Manoj','Thiparapu','Null'),
-('Laxmi','Thiparapu','Family'),
-('Manu','Thiparapu','Family')
+Update Address_Book_Table -- UC -11 Family and Friend
+Set RelationType='Family''Friend'
+Where FirstName='Ichigo'
 Go
 
-select * From Address_Book_Table2
+select *
+From Address_Book_Table
+ 
